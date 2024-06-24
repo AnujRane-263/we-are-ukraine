@@ -1,0 +1,30 @@
+@import "/styles/variables.scss";
+
+.container {
+  position: relative;
+  z-index: 22;
+  overflow: hidden;
+  margin-top: 41px;
+  margin-bottom: -900px;
+  @media screen and (max-width: $mobileResolution) {
+    margin-bottom: unset;
+    // margin-top: 18px;
+    // min-height: 1900px;
+    // margin-bottom: -567px;
+  }
+
+  .iframeContainer {
+    // margin-top: -63px;
+    // z-index: -1;
+    .iframe {
+      height: 1900px;
+      @media screen and (max-width: $mobileResolution) {
+        // height: 1000px;
+        height: 2370px;
+        overflow-y: hidden;
+        margin-bottom: -1483px;
+        margin-top: -18px;
+      }
+    }
+  }
+}

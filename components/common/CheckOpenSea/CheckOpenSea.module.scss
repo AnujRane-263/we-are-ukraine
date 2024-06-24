@@ -1,0 +1,41 @@
+@import "/styles/variables.scss";
+
+.mainCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 60px #0277bd;
+  margin: 40px;
+}
+
+.contentCard {
+  width: 600px;
+  text-align: center;
+  margin: 0 40px;
+
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    /* or 34px */
+
+    text-align: center;
+
+    color: #000000;
+
+    .btn {
+      background: #0277bd;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      padding: 20px;
+      cursor: pointer;
+      color: #ffffff;
+    }
+  }
+}

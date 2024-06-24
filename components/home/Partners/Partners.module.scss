@@ -1,0 +1,135 @@
+@import "/styles/variables.scss";
+
+.container {
+  color: $white;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+  position: relative;
+  z-index: 33;
+  background: #e3effb;
+
+  @media screen and (max-width: $mobileResolution) {
+    padding-top: 0;
+    padding-bottom: 10rem;
+  }
+  .heading {
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    // text-transform: uppercase;
+    margin-bottom: 3rem;
+    margin-top: 0rem;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 0.8rem;
+    }
+  }
+  .card {
+    text-align: center;
+    transition: 0.6s;
+    position: relative;
+
+    img {
+      @media screen and (max-width: $mobileResolution) {
+        max-width: 250px !important;
+      }
+    }
+
+    .textWrapper {
+      // padding: 1rem 0rem;
+      // background: red;
+      font-family: $font-alternate3;
+      color: $primary;
+      color: #006dbb;
+      font-size: 9.5rem;
+      margin-right: 3rem;
+      margin-left: 9rem;
+      // pointer-events: none;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 9.9rem;
+        margin-right: 3rem;
+        margin-left: 9rem;
+        margin-bottom: 3rem;
+      }
+
+      @media screen and (max-width: $ipadProResolution) {
+        margin-bottom: 7rem;
+        font-size: 10rem;
+      }
+
+      @media screen and (max-width: 850px) {
+        font-size: 6.7rem;
+      }
+      @media screen and (max-width: $mobileResolution) {
+        font-size: 80px;
+        text-align: center;
+        margin: 0;
+        padding: 0 1rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+    &.static {
+      // pointer-events: none;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: $mobileResolution) {
+        flex-direction: column;
+        margin-bottom: 0rem;
+      }
+    }
+    &:hover {
+      transform: scale(1.2);
+      &.static {
+        transform: none;
+      }
+    }
+    .circleImg {
+      // position: absolute;
+      // right: -28%;
+      // top: 15%;
+    }
+
+    .name {
+      color: #172d4d;
+    }
+    .designation {
+      color: $primary;
+    }
+
+    @media screen and (max-width: $mobileResolution) {
+      margin-bottom: 2rem;
+    }
+    // height: 27rem;
+    // background: $primary;
+    // min-height: 470px;
+    // .image {
+    //   height: 255px;
+    //   // background-image: url("/images/layout/slide2.jpg");
+    //   background: rgb(237, 236, 236);
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    // }
+    // .text {
+    //   color: $white;
+    //   font-size: 1rem;
+    //   color: $white;
+    //   font-size: 1.2rem;
+    //   padding: 2rem;
+    // }
+  }
+  .newsLetter {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    top: -27px;
+    left: 45px;
+    position: relative;
+    @media screen and (max-width: $mobileResolution) {
+      left: 0;
+      top: -46px;
+    }
+  }
+}

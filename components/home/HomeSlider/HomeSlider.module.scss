@@ -1,0 +1,109 @@
+@import "/styles/variables.scss";
+
+.container {
+  color: $white;
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+  position: relative;
+  &:before {
+    content: "";
+    width: 67rem;
+    height: 93rem;
+    position: absolute;
+    display: none;
+    top: -69rem;
+    left: -40rem;
+    // background-image: url("/images/layout/design.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-180deg);
+    @media screen and (max-width: $mobileResolution) {
+      content: "";
+      width: 53rem;
+      height: 82rem;
+      position: absolute;
+    }
+  }
+  @media screen and (max-width: $mobileResolution) {
+    // margin-left: 0.5rem;
+    .BannerContainer {
+      overflow-x: scroll;
+      .BannerRow {
+        width: 900px;
+        .BannerCol {
+          // flex: 0 0 22.733333%;
+        }
+      }
+    }
+  }
+
+  .card {
+    // height: 27rem;
+    background: $primary;
+    min-height: 470px;
+    transition: 0.3s;
+    position: relative;
+    &:hover {
+      transform: scale(1.1);
+      z-index: 2;
+      // animation: bounce 1s ease;
+    }
+
+    @media screen and (max-width: $mobileResolution) {
+      min-height: 446px;
+    }
+    .image {
+      height: 244px;
+      // background-image: url("/images/layout/slide2.jpg");
+      background: $white;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      border: 1px solid rgb(237, 236, 236);
+      background-position: center;
+
+      @media screen and (max-width: $mobileResolution) {
+        height: 200px;
+      }
+    }
+    .text {
+      color: $white;
+      font-size: 1rem;
+      color: $white;
+      font-size: 1.2rem;
+      padding: 2rem;
+      text-align: center;
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1180px) {
+        font-size: 1rem;
+      }
+      @media screen and (max-width: $mobileResolution) {
+        padding: 1.1rem;
+        font-size: 1.1rem;
+        min-height: 183px;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  10% {
+    transform: translateY(-15%);
+  }
+  20% {
+    transform: translateY(0%);
+  }
+  45% {
+    transform: translateY(-7%);
+  }
+  67% {
+    transform: translateY(0%);
+  }
+  79% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

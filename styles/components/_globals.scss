@@ -1,0 +1,359 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-default;
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // overflow-x: hidden;
+  // font-size: 1.1rem;
+  // font-family: "Inter", sans-serif;
+  letter-spacing: 0.02em;
+  // color: #fff;
+  background: $white;
+  &:not(.page-loaded) {
+    // overflow: hidden;
+  }
+}
+
+#__next {
+  overflow-x: hidden;
+}
+
+main {
+  // padding-top: 10rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $primary;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+.top-spacer {
+  padding-top: 12rem;
+  @media screen and (max-width: $mobileResolution) {
+    padding-top: 4rem;
+  }
+}
+
+#nprogress {
+  z-index: 10000;
+}
+// style for loader
+#nprogress .bar {
+  background: #000 !important;
+  height: 0.2rem;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #000, 0 0 5px #000;
+}
+/* I made these changes in nprogress.css */
+#nprogress .bar {
+  height: 3px;
+}
+#nprogress .spinner-icon {
+  width: 25px;
+  height: 25px;
+  border: solid 3px transparent;
+}
+.ant-collapse {
+  background-color: transparent;
+  border: 1px solid #222222;
+  > .ant-collapse-item {
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.defaut-collapse {
+  .ant-collapse-content {
+    background-color: transparent;
+    color: #fff;
+  }
+  .ant-collapse-header {
+    background-color: transparent;
+    color: #fff !important;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+  &.ant-collapse {
+    > .ant-collapse-item {
+      margin-bottom: 0;
+    }
+  }
+  .anticon {
+    svg {
+      font-size: 1.5rem !important;
+      opacity: 0.7;
+    }
+  }
+}
+
+.newsletter {
+  .ant-form-item-explain-error {
+    color: tomato !important;
+    font-size: 0.9rem;
+    // letter-spacing: 0.1rem;
+    opacity: 0.7;
+    text-align: left;
+  }
+  .ant-form-item-control-input {
+    // margin-bottom: 2rem;
+  }
+  input {
+    background-color: transparent !important;
+    &:-webkit-autofill {
+      -webkit-text-fill-color: #000 !important;
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    // -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    // border: 1px solid green;
+    // -webkit-text-fill-color: green;
+    // -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  // input#email::placeholder {
+  //   font-family: "TTNormsProMedium";
+  //   font-style: normal;
+  //   font-weight: 400;
+  //   font-size: 16px;
+  //   line-height: 140%;
+  //   /* or 22px */
+  //   text-align: left;
+  //   /* Dark */
+  //   color: #172d4d !important;
+  //   opacity: 0.8;
+  // }
+}
+
+.only-desktop {
+  @media screen and (max-width: 767px) {
+    display: none !important;
+  }
+}
+.only-mobile {
+  @media screen and (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+.modal-video-close-btn {
+  cursor: pointer;
+}
+
+.photo-credit {
+  &.pos1 {
+    position: relative;
+    &:after {
+      content: "Photo Credit : Save the Children";
+      position: absolute;
+      left: 0;
+      right: 4px;
+      margin: auto;
+      bottom: 9px;
+      text-align: right;
+      color: #b7b4b4;
+    }
+  }
+  &.pos2 {
+  }
+}
+
+.scroll-nav {
+  display: block;
+  position: relative;
+  top: -160px;
+  visibility: hidden;
+  &.type1 {
+    top: -114px;
+    @media screen and (max-width: $mobileResolution) {
+      top: -107px;
+    }
+  }
+  &.type2 {
+    @media screen and (max-width: $mobileResolution) {
+      top: -103px;
+    }
+  }
+  &.type3 {
+    @media screen and (max-width: $mobileResolution) {
+      top: -96px;
+    }
+  }
+}
+.container {
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+  @media screen and (min-width: $largeScreenResolution) {
+    // max-width: 1920px;
+    margin: 0;
+    padding: 0;
+  }
+  @media screen and (max-width: $mediumScreenResolution) {
+    // max-width: 1440px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.centeredSlider {
+  .swiper-slide {
+    // transform: scale(0.9) !important;
+
+    &.swiper-slide-active {
+      // transform: scale(1) !important;
+    }
+  }
+}
+.testSadow {
+  text-shadow: 1px 3px 4px #aaaaaa;
+}
+
+.cookiePopup {
+  width: 601px !important;
+  max-width: 96vw !important;
+  right: 2vw !important;
+  left: unset !important;
+  bottom: 20px !important;
+  background: #fff !important;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  box-shadow: 0px 3px 20px rgb(0 0 0 / 8%);
+  color: #000 !important;
+
+  a {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  @media only screen and (max-width: 767px) {
+    justify-content: center !important;
+    div {
+      text-align: center;
+      color: #000;
+    }
+  }
+}
+
+.GDPRButton {
+  display: inline-flex;
+  -moz-box-align: center;
+  align-items: center;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid #006dbb;
+  padding: 14px 26px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff !important;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  background: #006dbb !important;
+  // -webkit-box-shadow: 0px 1px 10px #041019;
+  // box-shadow: 0px 1px 10px #041019 !important;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-radius: 70px !important;
+  font-size: 12px;
+
+  text-transform: uppercase;
+  -moz-box-pack: center;
+  justify-content: center;
+  padding: 8px 18px !important;
+  border: 1px solid #fff !important;
+}
+
+// .ant-tabs-tabpane
+
+.nftTopSlider {
+  .ant-tabs-tabpane {
+    position: relative;
+  }
+
+  .ant-tabs-nav {
+    margin: auto !important;
+    width: 22rem;
+  }
+  .ant-tabs-tab-btn {
+    outline: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgb(0 0 0 / 40%);
+  }
+  .ant-tabs-ink-bar {
+    // position: absolute;
+    background: $primary;
+    pointer-events: none;
+    // width: 150px !important;
+    // left: -9px !important;
+  }
+  .ant-tabs-nav-wrap {
+    justify-content: center;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $primary;
+  }
+}
+
+.nftBottomSlider {
+  .ant-tabs-tab-btn {
+    color: rgb(0 0 0 / 40%);
+  }
+  .ant-tabs-nav {
+    width: 14rem;
+  }
+  .ant-input::placeholder {
+    color: rgb(0 0 0 / 44%);
+  }
+  .inputSearchWrapperMobile {
+    .anticon-down {
+      position: absolute;
+      right: 19px;
+      top: 14px;
+    }
+  }
+}

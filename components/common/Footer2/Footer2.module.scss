@@ -1,0 +1,126 @@
+@import "/styles/variables.scss";
+
+.container {
+  padding: 3rem 5.3rem 1rem 5.3rem;
+  background: $white;
+  position: relative;
+  z-index: 50;
+  margin-top: -3rem;
+  @media screen and (max-width: $mobileResolution) {
+    padding: 3rem 1rem;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 200px;
+    background: url("/images/layout/blue-bg-top2.png");
+    top: -185px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    @media screen and (max-width: $mobileResolution) {
+      top: -130px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: $mobileResolution) {
+      flex-direction: column;
+      // padding-top: 4rem;
+    }
+  }
+  .menu {
+    ul {
+      display: flex;
+      list-style: none;
+      margin-bottom: 3em;
+      flex: 0 0 40%;
+      @media screen and (max-width: $mobileResolution) {
+        // flex-wrap: wrap;
+
+        justify-content: space-between;
+        // margin-left: 2.5rem;
+      }
+      li {
+        @media screen and (max-width: $mobileResolution) {
+          margin-bottom: 12px;
+        }
+        a {
+          margin-right: 2.2rem;
+          font-size: 1rem;
+          font-family: $font-default-medium;
+        }
+        .bottomLinks {
+          @media screen and (max-width: $mobileResolution) {
+            // display: flex;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .hr {
+    height: 1px;
+    width: 100%;
+    background: $primary;
+    margin-bottom: 1rem;
+    opacity: 0.1;
+  }
+  .content2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media screen and (max-width: $mobileResolution) {
+      flex-direction: column-reverse;
+    }
+    // margin-bottom: 1rem;
+    .copywrightWrapper {
+      color: $font-color1;
+      // opacity: 0.5;
+
+      @media screen and (max-width: $mobileResolution) {
+        text-align: center;
+        // margin-left: -2.7rem;
+      }
+    }
+    .social {
+      @media screen and (max-width: $mobileResolution) {
+        width: 100%;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        @media screen and (max-width: $mobileResolution) {
+          width: 100%;
+          justify-content: center;
+        }
+        li {
+          a {
+            margin-right: 2.2rem;
+            font-size: 1.5rem;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+.leftWrapper {
+  @media screen and (max-width: $mobileResolution) {
+    // margin-left: 2.7rem;
+  }
+}
+.pl0 {
+  ul {
+    padding-left: 0;
+  }
+}

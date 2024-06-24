@@ -1,0 +1,79 @@
+@import "/styles/variables.scss";
+
+.container {
+  background-color: $primary;
+  margin: 0 auto;
+  z-index: 9;
+  position: relative;
+
+  .socialWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 1rem 0 0.5rem 0;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      flex: 0 0 50%;
+      margin-bottom: 0;
+
+      li {
+        margin: 0 3.6rem;
+        margin-bottom: 0;
+        @media screen and (max-width: $mobileResolution) {
+          display: block;
+          margin: 0;
+        }
+        &:hover {
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $mobileResolution) {
+      display: block;
+      text-align: left;
+      padding: 3rem 0 2rem 0.2rem;
+      margin-top: 2rem;
+      Image {
+        width: "100";
+        height: "50";
+      }
+      ul {
+        display: block;
+        font-size: 1rem;
+        padding: 0;
+        padding-left: 0.5rem;
+        padding-bottom: 1.5rem;
+        li {
+          margin-top: 2.3rem;
+        }
+      }
+    }
+
+    .footerContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .openSea {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .bannerLogo {
+        @media screen and (max-width: $mobileResolution) {
+          width: 4.1rem;
+        }
+      }
+
+      @media screen and (max-width: $mobileResolution) {
+        display: block;
+      }
+    }
+  }
+}

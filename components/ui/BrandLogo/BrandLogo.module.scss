@@ -1,0 +1,30 @@
+@import "/styles/variables.scss";
+
+.logoWrapper {
+  position: relative;
+  // background-color: red;
+  a {
+    font-size: 0;
+  }
+  @media screen and (max-width: $mobileResolution) {
+    width: 3.4rem;
+    display: inline-block;
+    z-index: 99999;
+  }
+}
+
+.logoContainer {
+  position: relative;
+  width: 80px;
+  height: 100%;
+  transition: all 0.3s;
+  @media screen and (max-width: $mobileResolution) {
+    width: 60px;
+    left: 30px;
+  }
+
+  &.headerMain {
+    width: 60px;
+    transition: all 0.6s;
+  }
+}
