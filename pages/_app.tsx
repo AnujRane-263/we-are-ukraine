@@ -12,6 +12,22 @@ import AOS from "aos";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    const initializeWeglot = () => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.weglot.com/weglot.min.js';
+      script.async = true;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        (window as any).Weglot.initialize({
+          api_key: 'wg_def8fa3e8e8cd487deee40f24f47a8012',
+        });
+      };
+    };
+
+    initializeWeglot();
+  }, []);
   // const router = useRouter();
   // for loader
 
