@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       script.onload = () => {
         (window as any).Weglot.initialize({
-          api_key: 'wg_def8fa3e8e8cd487deee40f24f47a8012',
+          api_key: 'wg_483a30b01475dffe292de868cb6e87d27',
         });
       };
     };
