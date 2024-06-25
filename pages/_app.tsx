@@ -12,25 +12,33 @@ import AOS from "aos";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  // useEffect(() => {
+  //   const initializeWeglot = () => {
+  //     const script = document.createElement('script');
+  //     script.src = 'https://cdn.weglot.com/weglot.min.js';
+  //     script.async = true;
+  //     document.body.appendChild(script);
+
+  //     script.onload = () => {
+  //       (window as any).Weglot.initialize({
+  //         api_key: 'wg_483a30b01475dffe292de868cb6e87d27',
+  //       });
+  //     };
+  //   };
+
+  //   initializeWeglot();
+  // }, []);
   useEffect(() => {
-    const initializeWeglot = () => {
+    const initializeSmartcat = () => {
       const script = document.createElement('script');
-      script.src = 'https://cdn.weglot.com/weglot.min.js';
+      script.id = 'sc-script';
+      script.src = 'https://cdn.smartcat-proxy.com/56dbc54d64af4bd5a402163074946ec9/script-v1/__translator.js?hash=91b040d2f36ef608b56608e2aa459a8c';
       script.async = true;
       document.body.appendChild(script);
-
-      script.onload = () => {
-        (window as any).Weglot.initialize({
-          api_key: 'wg_483a30b01475dffe292de868cb6e87d27',
-        });
-      };
     };
 
-    initializeWeglot();
+    initializeSmartcat();
   }, []);
-  // const router = useRouter();
-  // for loader
-
   useEffect(() => {
     AOS.init();
     AOS.refresh();
