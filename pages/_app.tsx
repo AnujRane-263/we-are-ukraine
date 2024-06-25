@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     const initializeSmartcat = () => {
       const script = document.createElement('script');
       script.id = 'sc-script';
-      script.src = 'https://cdn.smartcat-proxy.com/56dbc54d64af4bd5a402163074946ec9/script-v1/__translator.js?hash=91b040d2f36ef608b56608e2aa459a8c';
+      script.src = 'https://cdn.smartcat-proxy.com/d2d6b77570274823b01dce89f6e5c9f8/script-v1/__translator.js?hash=c734e5efbb79fc79ffa785e04a1ef6f3';
       script.async = true;
       document.body.appendChild(script);
     };
